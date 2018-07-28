@@ -1,5 +1,5 @@
 /*!
- * is-chinese-phone-number v0.1.6
+ * is-chinese-phone-number v0.1.7
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -14,8 +14,8 @@
       /^1(?:3[0-9]|4[5-9]|5[0-9]|6[12456]|7[0-8]|8[0-9]|9[0-9])[0-9]{8}$/
   ];
   var landlinePhoneNumber = [
-      /^(?:0[1-9][0-9]{1,2}-)?[2-9][0-9]{6,7}$/,
-      /^0[1-9][0-9]{1,2}-[2-9][0-9]{6,7}$/
+      /^(?:0[1-9][0-9]{1,2}-)?[2-8][0-9]{6,7}$/,
+      /^0[1-9][0-9]{1,2}-[2-8][0-9]{6,7}$/
   ];
   var isChinesePhoneNumber = (function (phoneNumber, strict) {
       if (strict === void 0) { strict = false; }

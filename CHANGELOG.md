@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.7"></a>
+## [0.1.7](https://github.com/fjc0k/is-chinese-phone-number/compare/v0.1.6...v0.1.7) (2018-07-28)
+
+
+### Bug Fixes
+
+* regex ([bee0c13](https://github.com/fjc0k/is-chinese-phone-number/commit/bee0c13))
+
+
+
 <a name="0.1.6"></a>
 ## [0.1.6](https://github.com/fjc0k/is-chinese-phone-number/compare/v0.1.5...v0.1.6) (2018-07-28)
 
