@@ -21,7 +21,7 @@ CDN：[jsDelivr](//www.jsdelivr.com/package/npm/is-chinese-phone-number) | [UNPK
 语法：
 
 ```typescript
-isChinesePhoneNumber(phoneNumber: string | number, strict?: boolean): boolean
+isChinesePhoneNumber(phoneNumber: string | number, strict: boolean = false): boolean
 ```
 
 示例：
@@ -37,7 +37,7 @@ isChinesePhoneNumber('010-88888888') // ==> true
 语法：
 
 ```typescript
-isChinesePhoneNumber.mobile(phoneNumber: string | number, strict?: boolean): boolean
+isChinesePhoneNumber.mobile(phoneNumber: string | number, strict: boolean = false): boolean
 ```
 
 示例：
@@ -53,7 +53,7 @@ isChinesePhoneNumber.mobile('010-88888888') // ==> false
 语法：
 
 ```typescript
-isChinesePhoneNumber.landline(phoneNumber: string | number, strict?: boolean): boolean
+isChinesePhoneNumber.landline(phoneNumber: string | number, strict: boolean = false): boolean
 ```
 
 示例：
@@ -70,7 +70,23 @@ isChinesePhoneNumber.landline('010-88888888') // ==> true
 
 **注：** 手机号码验证的严格模式下，使用的号段是上述计划所述的 `公众移动通信网网号`，并不保证其已被电信运营商开通运营。
 
-号码类型 | 宽松模式（默认） | 严格模式
----------|----------|----------
-手机 | 不验证号段：`/^1[3-9][0-9]{9}$/`       | 验证号段：`/^1(?:3[0-9]\|4[5-9]\|5[0-9]\|6[12456]\|7[0-8]\|8[0-9]\|9[0-9])[0-9]{8}$/`
-座机 | 区号可选：`/^(?:0[1-9][0-9]{1,2}-)?[2-9][0-9]{6,7}$/`      | 区号必填：`/^0[1-9][0-9]{1,2}-[2-9][0-9]{6,7}$/`
+- 手机号码
+
+  - 宽松模式
+
+    不验证号段：`/^1[3-9][0-9]{9}$/`。
+  
+  - 严格模式
+
+    验证号段：`/^1(?:3[0-9]|4[5-9]|5[0-9]|6[12456]|7[0-8]|8[0-9]|9[0-9])[0-9]{8}$/`。
+
+- 座机号码
+
+  - 宽松模式
+
+    区号可选：`/^(?:0[1-9][0-9]{1,2}-)?[2-9][0-9]{6,7}$/`。
+  
+  - 严格模式
+
+    区号必填：`/^0[1-9][0-9]{1,2}-[2-9][0-9]{6,7}$/`。
+

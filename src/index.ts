@@ -37,7 +37,7 @@ const landlinePhoneNumber: IPhoneNumber = [
   /^0[1-9][0-9]{1,2}-[2-9][0-9]{6,7}$/
 ]
 
-const isChinesePhoneNumber = ((phoneNumber: string | number, strict?: boolean): boolean => {
+const isChinesePhoneNumber = ((phoneNumber: string | number, strict: boolean = false): boolean => {
   const mode = strict ? 1 : 0
   return (
     mobilePhoneNumber[mode].test(phoneNumber as string) ||
@@ -45,12 +45,12 @@ const isChinesePhoneNumber = ((phoneNumber: string | number, strict?: boolean): 
   )
 }) as IIsChinesePhoneNumber
 
-isChinesePhoneNumber.mobile = (phoneNumber: string | number, strict?: boolean): boolean => {
+isChinesePhoneNumber.mobile = (phoneNumber: string | number, strict: boolean = false): boolean => {
   const mode = strict ? 1 : 0
   return mobilePhoneNumber[mode].test(phoneNumber as string)
 }
 
-isChinesePhoneNumber.landline = (phoneNumber: string | number, strict?: boolean): boolean => {
+isChinesePhoneNumber.landline = (phoneNumber: string | number, strict: boolean = false): boolean => {
   const mode = strict ? 1 : 0
   return landlinePhoneNumber[mode].test(phoneNumber as string)
 }
