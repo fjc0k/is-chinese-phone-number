@@ -1,6 +1,6 @@
 {
   "name": "is-chinese-phone-number",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "中国电话号码验证函数。",
   "license": "MIT",
   "main": "dist/is-chinese-phone-number.cjs.js",
