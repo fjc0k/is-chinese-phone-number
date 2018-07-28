@@ -1,4 +1,4 @@
-# isChinesePhoneNumber
+# isChinesePhoneNumber ![Travis CI](https://api.travis-ci.org/fjc0k/is-chinese-phone-number.svg?branch=master)
 
 中国电话号码验证函数。支持验证固定电话号码、移动电话号码。
 
@@ -16,10 +16,50 @@ CDN：[jsDelivr](//www.jsdelivr.com/package/npm/is-chinese-phone-number) | [UNPK
 
 ## 使用
 
-- `isChinesePhoneNumber(phoneNumber: String | Number, strict: Boolean)`
+### 验证中国电话号码
 
-  ```javascript
-  isChinesePhoneNumber('10086') // ==> false
-  isChinesePhoneNumber('18087030020') // ==> true
-  isChinesePhoneNumber('010-88888888') // ==> true
-  ```
+语法：
+
+```typescript
+isChinesePhoneNumber(phoneNumber: string | number, strict?: boolean): boolean
+```
+
+示例：
+
+```javascript
+isChinesePhoneNumber('10086') // ==> false
+isChinesePhoneNumber('18087030020') // ==> true
+isChinesePhoneNumber('010-88888888') // ==> true
+```
+
+### 验证中国移动电话号码
+
+语法：
+
+```typescript
+isChinesePhoneNumber.mobile(phoneNumber: string | number, strict?: boolean): boolean
+```
+
+示例：
+
+```javascript
+isChinesePhoneNumber.mobile('10086') // ==> false
+isChinesePhoneNumber.mobile('18087030020') // ==> true
+isChinesePhoneNumber.mobile('010-88888888') // ==> false
+```
+
+### 验证中国固定电话号码
+
+语法：
+
+```typescript
+isChinesePhoneNumber.landline(phoneNumber: string | number, strict?: boolean): boolean
+```
+
+示例：
+
+```javascript
+isChinesePhoneNumber.landline('10086') // ==> false
+isChinesePhoneNumber.landline('18087030020') // ==> false
+isChinesePhoneNumber.landline('010-88888888') // ==> true
+```
