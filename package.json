@@ -1,0 +1,69 @@
+{
+  "name": "is-chinese-phone-number",
+  "version": "0.0.0",
+  "description": "中国电话号码验证函数。",
+  "license": "MIT",
+  "main": "dist/is-chinese-phone-number.cjs.js",
+  "unpkg": "dist/is-chinese-phone-number.min.js",
+  "jsdelivr": "dist/is-chinese-phone-number.min.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://github.com/fjc0k/is-chinese-phone-number",
+  "author": {
+    "name": "Jay Fong",
+    "email": "fjc0kb@gmail.com",
+    "url": "https://github.com/fjc0k"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fjc0k/is-chinese-phone-number.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fjc0k/is-chinese-phone-number/issues"
+  },
+  "keywords": [
+    "chinese",
+    "landline",
+    "mobile",
+    "phone",
+    "number"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "bili --input src/index.ts --format cjs,umd,umd-min --moduleName isChinesePhoneNumber --banner",
+    "release": "standard-version -a",
+    "postrelease": "git push --follow-tags origin master && npm publish"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "yarn build && git add -A"
+    }
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.ts"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.1",
+    "bili": "^3.1.2",
+    "codecov": "^3.0.4",
+    "jest": "^23.4.2",
+    "rollup-plugin-typescript2": "^0.16.1",
+    "standard-version": "^4.4.0",
+    "ts-jest": "^23.0.1",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "tslint:latest"
+  ],
+  "rules": {
+    "semicolon": false,
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ]
+  }
+}
