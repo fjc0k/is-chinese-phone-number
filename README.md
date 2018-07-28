@@ -1,6 +1,6 @@
 # isChinesePhoneNumber ![Travis CI](https://api.travis-ci.org/fjc0k/is-chinese-phone-number.svg?branch=master)
 
-中国电话号码验证函数。支持验证固定电话号码、移动电话号码。
+中国电话号码验证函数。支持验证手机号码、座机号码。
 
 ## 安装
 
@@ -32,7 +32,7 @@ isChinesePhoneNumber('18087030020') // ==> true
 isChinesePhoneNumber('010-88888888') // ==> true
 ```
 
-### 验证中国移动电话号码
+### 验证中国手机号码
 
 语法：
 
@@ -48,7 +48,7 @@ isChinesePhoneNumber.mobile('18087030020') // ==> true
 isChinesePhoneNumber.mobile('010-88888888') // ==> false
 ```
 
-### 验证中国固定电话号码
+### 验证中国座机号码
 
 语法：
 
