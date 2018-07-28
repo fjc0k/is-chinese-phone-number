@@ -33,8 +33,8 @@ const mobilePhoneNumber: IPhoneNumber = [
 ]
 
 const landlinePhoneNumber: IPhoneNumber = [
-  /^(?:0[1-9][0-9]{1,2}-)?[2-9][0-9]{6,7}$/,
-  /^0[1-9][0-9]{1,2}-[2-9][0-9]{6,7}$/
+  /^(?:0[1-9][0-9]{1,2}-)?[2-8][0-9]{6,7}$/,
+  /^0[1-9][0-9]{1,2}-[2-8][0-9]{6,7}$/
 ]
 
 const isChinesePhoneNumber = ((phoneNumber: string | number, strict: boolean = false): boolean => {
