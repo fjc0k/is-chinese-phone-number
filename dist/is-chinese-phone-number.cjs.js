@@ -1,5 +1,5 @@
 /*!
- * is-chinese-phone-number v0.1.5
+ * is-chinese-phone-number v0.1.6
  * (c) 2018-present Jay Fong <fjc0kb@gmail.com> (https://github.com/fjc0k)
  * Released under the MIT License.
  */
@@ -14,15 +14,18 @@ var landlinePhoneNumber = [
     /^0[1-9][0-9]{1,2}-[2-9][0-9]{6,7}$/
 ];
 var isChinesePhoneNumber = (function (phoneNumber, strict) {
+    if (strict === void 0) { strict = false; }
     var mode = strict ? 1 : 0;
     return (mobilePhoneNumber[mode].test(phoneNumber) ||
         landlinePhoneNumber[mode].test(phoneNumber));
 });
 isChinesePhoneNumber.mobile = function (phoneNumber, strict) {
+    if (strict === void 0) { strict = false; }
     var mode = strict ? 1 : 0;
     return mobilePhoneNumber[mode].test(phoneNumber);
 };
 isChinesePhoneNumber.landline = function (phoneNumber, strict) {
+    if (strict === void 0) { strict = false; }
     var mode = strict ? 1 : 0;
     return landlinePhoneNumber[mode].test(phoneNumber);
 };
