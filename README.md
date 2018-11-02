@@ -1,4 +1,4 @@
-# isChinesePhoneNumber ![Travis CI](https://api.travis-ci.org/fjc0k/is-chinese-phone-number.svg?branch=master)
+# isChinesePhoneNumber ![Travis CI](https://api.travis-ci.org/fjc0k/is-chinese-phone-number.svg?branch=master) <a href="https://codecov.io/gh/fjc0k/is-chinese-phone-number"><img src="https://codecov.io/gh/fjc0k/is-chinese-phone-number/branch/master/graph/badge.svg" alt="Coverage Status"></a>
 
 中国电话号码验证函数。支持验证手机号码、座机号码。
 

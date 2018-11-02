@@ -5,13 +5,15 @@
     "module": "esnext",
     "moduleResolution": "node",
     "declaration": true,
+    "removeComments": false,
+    "esModuleInterop": true,
     "lib": [
-      "es2015"
+      "esnext"
     ]
   },
   "exclude": [
     "node_modules/",
-    "dist/",
+    "lib/",
     "test/"
   ]
 }

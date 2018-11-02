@@ -3,10 +3,11 @@
   "version": "0.1.7",
   "description": "中国电话号码验证函数。支持验证手机号码、座机号码。",
   "license": "MIT",
-  "main": "dist/is-chinese-phone-number.cjs.js",
-  "unpkg": "dist/is-chinese-phone-number.min.js",
-  "jsdelivr": "dist/is-chinese-phone-number.min.js",
-  "types": "dist/index.d.ts",
+  "main": "lib/is-chinese-phone-number.cjs.js",
+  "module": "lib/is-chinese-phone-number.es.js",
+  "unpkg": "lib/is-chinese-phone-number.min.js",
+  "jsdelivr": "lib/is-chinese-phone-number.min.js",
+  "types": "lib/index.d.ts",
   "homepage": "https://github.com/fjc0k/is-chinese-phone-number",
   "author": {
     "name": "Jay Fong",
@@ -32,7 +33,7 @@
   ],
   "scripts": {
     "test": "jest --coverage",
-    "build": "bili --input src/index.ts --format cjs,umd,umd-min --moduleName isChinesePhoneNumber --banner",
+    "build": "bili",
     "release": "standard-version -a",
     "postrelease": "git push --follow-tags origin master && npm publish"
   },
@@ -56,14 +57,14 @@
     ]
   },
   "devDependencies": {
-    "@types/jest": "^23.3.1",
-    "bili": "^3.1.2",
+    "@types/jest": "^23.3.9",
+    "bili": "^3.3.0",
     "codecov": "^3.0.4",
-    "jest": "^23.4.2",
-    "rollup-plugin-typescript2": "^0.16.1",
+    "jest": "^23.6.0",
+    "rollup-plugin-typescript2": "^0.17.2",
     "standard-version": "^4.4.0",
-    "ts-jest": "^23.0.1",
+    "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
-    "typescript": "^2.9.2"
+    "typescript": "^3.1.6"
   }
 }
